@@ -1,9 +1,10 @@
 import strawberry
-from database import TaskORM, SessionLocal
-from task import Task
 from uuid import uuid4
 from datetime import datetime
 from strawberry.exceptions import GraphQLError
+
+from .task import Task
+from .database import TaskORM, SessionLocal
 
 
 @strawberry.type

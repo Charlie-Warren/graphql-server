@@ -18,7 +18,7 @@ This will setup a venv and install the requirements in one step.
 ### A) Running locally
 To start the server, run:
 ```
-python app/main.py
+python -m app.main
 ```
 
 ### B) Running a Container
