@@ -9,6 +9,9 @@ from datetime import datetime
 class Mutation:
     @strawberry.mutation
     def add_task(self, title: str) -> Task:
+        """
+        Create a new task.
+        """
         with SessionLocal() as db:
             task = TaskORM(
                 id=str(uuid4()),
@@ -23,6 +26,9 @@ class Mutation:
 
     @strawberry.mutation
     def toggle_task(self, id: strawberry.ID) -> Task | None:
+        """
+        Toggle a task between completed and not completed.
+        """
         with SessionLocal() as db:
             task = db.query(TaskORM).filter(TaskORM.id == str(id)).first()
             if not task:
@@ -35,6 +41,9 @@ class Mutation:
 
     @strawberry.mutation
     def delete_task(self, id: strawberry.ID) -> Task | None:
+        """
+        Delete a task, returning the deleted task.
+        """
         with SessionLocal() as db:
             task = db.query(TaskORM).filter(TaskORM.id == str(id)).first()
             if not task:
