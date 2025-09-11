@@ -14,7 +14,22 @@ uv sync
 This will setup a venv and install the requirements in one step.
 
 ## Running the Server
+
+### A) Running locally
 To start the server, run:
 ```
 python app/main.py
+```
+
+### B) Running a Container
+A Dockerfile has been provided if you prefer to run the server in a container.
+
+To build the image, run:
+```
+docker build -t graphql-server .
+```
+
+To run the container, run:
+```
+docker run --rm -it -p 8000:8000 graphql-server
 ```
