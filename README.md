@@ -16,5 +16,5 @@ This will setup a venv and install the requirements in one step.
 ## Running the Server
 To start the server, run:
 ```
-
+python app/main.py
 ```
