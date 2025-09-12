@@ -1,6 +1,7 @@
 import strawberry
-from database import TaskORM, SessionLocal
-from task import Task
+
+from .database import TaskORM, SessionLocal
+from .task import Task
 
 
 @strawberry.type

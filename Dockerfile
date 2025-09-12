@@ -8,4 +8,4 @@ RUN pip install .
 
 COPY app ./app
 
-CMD ["python", "app/main.py"]
+CMD ["python", "-m", "app.main"]
