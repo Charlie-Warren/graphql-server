@@ -2,18 +2,25 @@
 An example GraphQL server using FastAPI and Strawberry GraphQL.
 
 ## Installation
+### pip
 Install by running:
 ```
 pip install .
 ```
-Adding the `[dev]` flag is required for running the pytest tests.
+Adding the `--group dev` flag is required for running the pytest tests:
+```
+pip install . --group dev
+```
 
+### uv
 Alternatively, if you are using [uv package manager](https://docs.astral.sh/uv/), you can simply run:
 ```
 uv sync
 ```
-This will setup a venv and install the requirements in one step.
-Adding the `--dev` flag is required for running the pytest tests.
+This will setup a venv and install the requirements in one step. Adding the `--dev` flag is required for running the pytest tests:
+```
+uv sync --dev
+```
 
 ## Testing
 
