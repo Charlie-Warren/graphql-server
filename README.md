@@ -43,10 +43,13 @@ To run the container, run:
 docker run --rm -it -p 8000:8000 graphql-server
 ```
 
+## Quick Example
+On Windows, and with uv installed, you can run [uv-run-server-client-example.bat](uv-run-server-client-example.bat) to quickly start the api and run an example client script.
+
 ## Future Considerations
 
 In future, I would like to add the following:
 - More thorough tests
 - Authentication and Users, so individuals can only acces their own task list
-- A `tasks_by_status()` query, that filters tasks by whether they are incomplete or complete
+- A `tasks_by_status()` query, that filters tasks by whether they are incomplete or complete. Alternatively this could be an optional filter for the tasks() query
 - An `update_task()` mutation, that allows updating the title of a task (and incidentally updating the `updated_at` timestamp)

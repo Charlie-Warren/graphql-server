@@ -80,23 +80,3 @@ if __name__ == "__main__":
 
     deleted = run_query(mutation_delete_task, {"id": task_id})
     print("Deleted task:", deleted)
-
-    # Try a bad query
-    bad_query = """
-    mutation {
-        addTask(title: $title) {
-            id
-            title
-            completed
-            createdAt
-            updatedAt
-        }
-    }
-    """
-    bad_response = run_query(bad_query, {"title": "Test task"})
-    print("Bad response:", bad_response)
-
-    # Attempt an invalid id
-    bad_id = "bad-id"
-    bad_response = run_query(mutation_toggle_task, {"id": bad_id})
-    print("Bad response:", bad_response)
